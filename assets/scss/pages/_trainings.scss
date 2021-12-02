@@ -1,0 +1,180 @@
+.trainings{
+  padding-bottom: 80px;
+  .trainings__content{
+    h2{
+      font-size: 30px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      color: #808080;
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 0;
+    }
+    .trainings__list{
+      margin: 20px 0;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li{
+        padding: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: -10px;
+          border-radius: 50%;
+          background-color: #0094FF;
+        }
+      }
+    }
+  }
+}
+.links{
+  // background-color: #F9FCFF;
+  .link{
+    padding: 25px 0;
+    a{
+      color: #0094FF;
+      text-decoration: none;
+    }
+  }
+}
+.left__content{
+  .left__top{
+    width: 100%;
+    padding: 15px;
+    background-color: #F9FCFF;
+  }
+  .left {
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__date {
+      font-weight: bold;
+      font-size: 13px;
+      color: #0094FF;
+    }
+    &__content {
+      color: #000;
+      opacity: 0.6;
+      font-size: 14px;
+      text-decoration: none;
+      line-height: 20px;
+      display: block;
+    }
+  }
+  .left__bottom{
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #0094FF;
+    img{
+      width: 100%;
+    }
+    form{
+      margin-top: 25px;
+      input, textarea{
+        color: white;
+        font-size: 14px;
+        padding: 18px 20px;
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        &::placeholder {
+          color: white;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+        }
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        position: relative;
+        appearance: none;
+      }
+      textarea{
+        resize: none;
+        height: 90px;
+      }
+      button{
+        width: 100%;
+        color: #0094FF;
+        border: none;
+        margin-top: 15px;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.trening {
+  flex-direction: column;
+  margin-bottom: 80px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 35px;
+    color: #000;
+    margin: 0 auto 50px;
+    width: 100%;
+    text-align: center;
+  }
+  &__subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+  }
+  &__date {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0094FF;
+  }
+}
+
+
+// Responsive
+@media (min-width: 0) and (max-width: 576px){
+  .trainings{
+    .trainings__content{
+      h2{
+        font-size: 22px;
+        text-align: center;
+      }
+      p{
+        margin-top: 10px;
+      }
+      .trainings__list{
+        flex-direction: column;
+      }
+    }
+  }
+  .links{
+    padding-left: 15px!important;
+  }
+  .left__form {
+    padding-right: 0;
+  }
+  .left__content{
+    .left__top{
+      span, p{
+        font-size: 14px;
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+    .left__bottom{
+      margin-top: 0;
+    }
+  }
+}

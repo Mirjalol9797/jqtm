@@ -1,0 +1,161 @@
+.archive-page {
+  margin-bottom: 80px;
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+      transition: all .4s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    padding-bottom: 15px;
+    display: block;
+  }
+
+  &__body {
+    color: #808080;
+    @include textWrapper(4);
+    
+    p:nth-child(1) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+}
+
+.page-item {
+  &__content {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    img {
+      max-width: 220px;
+    }
+  }
+
+  .trainings__list{
+    margin: 20px 0;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+      padding: 10px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: -10px;
+        border-radius: 50%;
+        background-color: #0094FF;
+      }
+    }
+  }  
+}
+
+@media (max-width: 1200px) {
+  .archive-page {
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .archive-page {
+    margin-bottom: 40px;
+    &__title {
+      text-align: center;
+    }
+  }
+  // .page-item {
+  //   &__content {
+  //     img {
+  //       // width: 100%;
+  //     }
+  //   }
+  // }
+}
+
+@media (max-width: 768px) {
+  .archive-page {
+    &__list {
+      justify-content: center;
+    }
+    &__item {
+      max-width: 320px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .archive-page {
+    &__title {
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+    &__img {
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      padding-bottom: 5px;
+    }
+  }
+  .page-item {
+    &__content {
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+        max-width: 320px;
+        display: block;
+        margin: 0 auto 5px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-item {
+    &__img {
+      float: none;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+}
